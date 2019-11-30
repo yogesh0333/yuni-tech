@@ -1,0 +1,466 @@
+<script language="JavaScript">
+    /**
+      * Disable right-click of mouse, F12 key, and save key combinations on page
+      * By Arthur Gareginyan (arthurgareginyan@gmail.com)
+      * For full source code, visit https://mycyberuniverse.com
+      */
+    window.onload = function() {
+      document.addEventListener("contextmenu", function(e){
+        e.preventDefault();
+      }, false);
+      document.addEventListener("keydown", function(e) {
+      //document.onkeydown = function(e) {
+        // "I" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          disabledEvent(e);
+        }
+        // "J" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+          disabledEvent(e);
+        }
+        // "S" key + macOS
+        if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+          disabledEvent(e);
+        }
+        // "U" key
+        if (e.ctrlKey && e.keyCode == 85) {
+          disabledEvent(e);
+        }
+        // "F12" key
+        if (event.keyCode == 123) {
+          disabledEvent(e);
+        }
+      }, false);
+      function disabledEvent(e){
+        if (e.stopPropagation){
+          e.stopPropagation();
+        } else if (window.event){
+          window.event.cancelBubble = true;
+        }
+        e.preventDefault();
+        return false;
+      }
+    };
+  </script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Welcome to Yuni</title>
+    <script src="/js/app.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div id="logo">
+        <img src="./images/logo.png" width="200px" height="75px" alt="logo" />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="getAQuote">Get a quote</a></li>
+      </ul>
+    </nav>
+    <!-- Header: Showcase -->
+    <header id="showcase">
+      <div class="showcase-overlay">
+        <div class="showcase-content">
+          <h1>DIGITAL FUTURE</h1>
+          <p class="lead">
+            Companies across the economic landscape are using data and advanced
+            analytical to unlock new sources
+          </p>
+          <a href="#" class="learn">LEARN MORE</a>
+        </div>
+      </div>
+    </header>
+    <!-- Data Sources -->
+    <section id="dataSources">
+      <p style="text-align: center;">How Do We Use</p>
+      <h1 style="text-align: center; color: #004ec9;">DATA SOURCES</h1>
+      <div class="container">
+        <div class="row ">
+          <div class="col-md-4">
+            <div class="card dataSourcesCard">
+              <img
+                src="./images/AI Platform.png"
+                class="card-img-top img-responsive"
+                alt="..."
+                class="aiImg"
+              />
+              <div class="card-body ">
+                <h5 class="card-title">AI Platform</h5>
+                <p class="card-text">
+                  AI has entered the business world. We are targeting 1 billion
+                  people to derive knowledge
+                </p>
+                <a href="#" class="readMore">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="./images/a1 2.png"
+                class="card-img-top img-responsive"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">X-Sector Data</h5>
+                <p class="card-text">
+                  Companies across the economic landscape are using data and
+                  advanced analytics
+                </p>
+                <a href="#" class="readMore">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="./images/ai 3.png"
+                class="card-img-top img-responsive"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Global Reach</h5>
+                <p class="card-text">
+                  Expansion is the key step of any Business. Yuni could help in
+                  getting you Global.
+                </p>
+                <a href="#" class="readMore">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Digital future -->
+    <section id="digitalFuture">
+      <div class="row ">
+        <div class="col-md-6 ">
+          <img src="./images/Ai-men.png" alt="" />
+        </div>
+        <div class="col-md-6">
+          <h4>About Us</h4>
+          <h3>The Digital Future</h3>
+          <h5 style="color: #69798d;">
+            Our founding team experience how business leaders frequently make
+            the decision with data they cannot trust. Sometimes they rely on
+            “Gut Feel”. Too much time is spent wading through voluminous
+            reports. That’s not “listening”…that’s “searching”. In order to make
+            more informed decisions we have to improve data quality, lower cost
+            of access to information, improve the presentation, keep information
+            real-time and make senior management aware business intelligence.
+          </h5>
+          <a href="#" class="learn2">LEARN MORE</a>
+        </div>
+      </div>
+      <img
+        src="./images/digital future design.png"
+        alt=""
+        class="dottedDesign"
+      />
+    </section>
+    <!-- Ynui platform -->
+    <section id="yuniPlatform">
+      <p>AI Architecture Platform</p>
+      <h1>YUNI PLATFORM</h1>
+      <div class="row">
+        <div class="col-md-4 offset-md-1">
+          <img src="./images/desktop-pic.png" alt="" class="layer-15" />
+        </div>
+        <div class="col-md-7 financialService">
+          <div>
+            <h2>Financial Services</h2>
+            <h6>
+              We knew it would take different kind of a platform which can
+              process various form of data to build intelligence that works from
+              the ground up. We founded Yuni, which is an AI platform that
+              enables the data provider ecosystem monetise their data by
+              delivering relevance, intelligence and revenue to an external
+              firm.
+            </h6>
+            <img src="./images/curve.png" alt="" class="curve" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- working in yuni -->
+    <section id="workingInYuni">
+      <div class="row">
+        <div class="col-md-4 offset-md-1">
+          <h4>Data Science & Technology</h4>
+          <h5 style="color: #004ec9;">Working in Yuni</h5>
+          <div class="row">
+            <div class="col-md-11 offset-md-1">
+              <ul>
+                <li>
+                  Advancing data science and technology to deliver intelligence
+                  for all
+                </li>
+                <li>
+                  <p>
+                    Our founding team experience how business leaders frequently
+                    make decision with data they cannot trust. Sometimes they
+                    rely on “Gut Feel”.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="learn2"
+            style="top: 40px !important; position: relative;"
+            >LEARN MORE</a
+          >
+        </div>
+        <div class="col-md-7 ">
+          <img src="./images/eyeimgae.png" alt="" style="float: right;" />
+        </div>
+      </div>
+      <img
+        src="./images/digital future design.png"
+        alt=""
+        class="dottedDesign2"
+      />
+    </section>
+    <!-- Work Process -->
+    <section id="workProcess">
+      <img
+        src="./images/work process background.png"
+        alt=""
+        class="workProcessImage"
+      />
+      <div class="row workProcessContainer">
+        <div class="col-md-2 offset-md-1">
+          <div class="card card1">
+            <div class="card-body">
+              <h1 class="card-title numbers">8k</h1>
+              <p class="card-text numbers-info">TGlobal Customer</p>
+            </div>
+          </div>
+          <div class="card card1">
+            <div class="card-body">
+              <h1 class="card-title numbers">40+</h1>
+              <p class="card-text numbers-info">Team Member</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 card2set">
+          <div class="card card2">
+            <div class="card-body">
+              <h1 class="card-title numbers">90+</h1>
+              <p class="card-text numbers-info">Project Completed</p>
+            </div>
+          </div>
+          <div class="card card2">
+            <div class="card-body">
+              <h1 class="card-title numbers">3</h1>
+              <p class="card-text numbers-info">Company in World</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 work">
+          <h3>Work process</h3>
+          <h1>Creating value by Reinventing the core, together</h1>
+          <ul>
+            <li>
+              <p>
+                Less than 10% of digital initiatives have created the value
+                expected
+              </p>
+            </li>
+            <li>
+              <p>
+                We know how technology and digital trends are transforming your
+                environment. We’ll uncover where the real value exists for you
+              </p>
+            </li>
+            <li>
+              <p>
+                Then together we’ll capture it. Our track record? A 50x the
+                average return on our fees
+              </p>
+            </li>
+          </ul>
+          <a href="#" class="learn2" style="position: relative; top: 45px;"
+            >LEARN MORE</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- testimonial -->
+    <section id="testimonial">
+      <div id="testimonial-intro">
+        <div class="testimonialHeading">
+          <h6>Testimonial</h6>
+          <h2>Our Customers Loves Us</h2>
+        </div>
+      </div>
+      <div class="testimonialParagraph">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+      </div>
+      <div class="lady">
+        <h6>Lorem ipsum</h6>
+        <p>Aenean massa</p>
+      </div>
+      <div class="team">
+        <p>Team Member</p>
+        <h1>We Have Some Awesome People</h1>
+      </div>
+      <div class="circle-images">
+        <div class="circle-image1">
+          <img src="./images/circle image.png" alt="" />
+          <h6>Saurabh Srivastava</h6>
+          <p>Global Managing director</p>
+        </div>
+        <div class="circle-image2">
+          <img src="./images/circleimg2.png" alt="" />
+          <h6>Saurabh Srivastava</h6>
+          <p>Global Managing director</p>
+        </div>
+        <div class="circle-image3">
+          <img src="./images/circleimg3.png" alt="" />
+          <h6>Saurabh Srivastava</h6>
+          <p>Global Managing director</p>
+        </div>
+        <div class="circle-image4">
+          <img src="./images/circleimg4.png" alt="" />
+          <h6>Saurabh Srivastava</h6>
+          <p>Global Managing director</p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact-us -->
+    <section id="contactUs">
+      <h4>World Map</h4>
+      <h1>Contact Us</h1>
+      <ul>
+        <li><a href="#">INDIA</a></li>
+        |
+        <li><a href="#">SINGAPORE</a></li>
+        |
+        <li><a href="#">THAILAND</a></li>
+      </ul>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.6136821822!2d77.0688989145198!3d28.527218143201548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1574253850565!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        frameborder="0"
+        style="border:0;"
+        allowfullscreen=""
+        class="map "
+      ></iframe>
+    </section>
+    <!-- Group -->
+    <section id="whyAreWeHere">
+      <div class="row">
+        <div class="col-md-5 offset-md-1">
+          <h5>Yuni</h5>
+          <h1>Why are we here?</h1>
+          <h4>
+            Advancing data science and technology to deliver intelligence for
+            all
+          </h4>
+          <h4>
+            Our founding team experience how business leaders frequently make
+            decision with data they cannot trust. Sometimes they rely on “Gut
+            Feel”. Too much time is spent wading through voluminous reports.
+            That’s not “listening”…that’s “searching”.
+          </h4>
+          <a href="#" class="learn2">LEARN MORE</a>
+        </div>
+        <div class="col-md-6">
+          <img src="./images/groupimage.png" alt="" style="float: right;" />
+        </div>
+      </div>
+    </section>
+    <!-- Contact Info -->
+    <section id="contactInfo">
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            src="./images/contact-info-curve1.png"
+            class="contactInfoCurve1"
+            alt=""
+          />
+        </div>
+        <div class="col-md-4 contactForm " style="left: 30px !important;">
+          <h2>Send Us a Message</h2>
+          <div>
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" />
+            <input type="number" placeholder="Number" />
+            <input type="text" placeholder="Website" />
+          </div>
+          <textarea name="message" id="" cols="50" rows="7" class="textarea">
+Message</textarea
+          >
+          <button type="submit" id="button">Contact Us</button>
+        </div>
+        <!-- <div class="col-md-6"> -->
+        <div class="col-md-3 offset-md-1  contactDetails">
+          <h1>Contact</h1>
+          <div>
+            <p>Give us an call</p>
+            <h2>(011)123-1567</h2>
+          </div>
+          <div>
+            <p>Send us an email</p>
+            <h2>info@company.com7</h2>
+          </div>
+          <div>
+            <p>Visit us someday</p>
+            <h2>122,King Lane, Banglore</h2>
+          </div>
+          <div>
+            <p>Follow us on</p>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+        <!-- </div> -->
+        <div class="col-md-2">
+          <img
+            src="./images/contact-info-curve2.png"
+            class="contactInfoCurve2"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <section id="footer">
+      <div><p>Copyright &copy; 2018, All Rights Reserved | Yuni</p></div>
+      <div><p>Privacy Policy.Terms & Conditions</p></div>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/17d8f7ccb4.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
